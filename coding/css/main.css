@@ -1,0 +1,713 @@
+/* section1-visual */
+
+.visual {
+  height: calc(100vh - 67px);
+
+  position: relative;
+  background: var(--main-color);
+  border-bottom: 1px solid #fff;
+}
+
+.visual-grid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1px;
+
+  overflow: hidden;
+  background: #fff;
+}
+.visual-grid-item {
+  position: relative;
+  background: var(--main-color);
+}
+
+.visual-grid-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  background: url(../img/section1/grid-star.svg) no-repeat 0 0 / cover;
+}
+.visual-grid-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, 50%);
+  background: url(../img/section1/grid-star.svg) no-repeat 0 0 / cover;
+}
+
+.visual-grid-item:nth-child(1)::before,
+.visual-grid-item:nth-child(1)::after,
+.visual-grid-item:nth-child(8)::before,
+.visual-grid-item:nth-child(8)::after,
+.visual-grid-item:nth-child(15)::before,
+.visual-grid-item:nth-child(15)::after {
+  background: transparent;
+}
+
+.ico {
+}
+.ico1 {
+  background: url(../img/section1/section1-ico1.svg) no-repeat 50% / contain;
+  width: 45rem;
+  height: 45rem;
+  position: absolute;
+  top: 31rem;
+  left: 41rem;
+}
+.ico2 {
+  background: url(../img/section1/section1-ico1.svg) no-repeat 50% / contain;
+  width: 35rem;
+  height: 35rem;
+  position: absolute;
+  top: 65rem;
+  left: 10.3rem;
+}
+.ico3 {
+  background: url(../img/section1/section1-ico3.svg) no-repeat 50% / contain;
+  width: 45rem;
+  height: 45rem;
+  position: absolute;
+  top: 50rem;
+  left: 103rem;
+}
+.ico4 {
+  background: url(../img/section1/section1-ico4.svg) no-repeat 50% / contain;
+  width: 51rem;
+  height: 51rem;
+  position: absolute;
+  top: 43rem;
+  left: 143rem;
+}
+.ico5 {
+  background: url(../img/section1/section1-ico5.svg) no-repeat 50% / contain;
+  width: 26rem;
+  height: 26rem;
+  position: absolute;
+  top: 34rem;
+  left: 173rem;
+}
+.ico6 {
+  background: url(../img/section1/section1-ico6.svg) no-repeat 50% / contain;
+  width: 16rem;
+  height: 3.9rem;
+  position: absolute;
+  top: 37rem;
+  left: 0;
+}
+.ico7 {
+  background: url(../img/section1/section1-ico7-glitter.svg) no-repeat 50% / contain;
+  width: 5rem;
+  height: 10.4rem;
+  position: absolute;
+  top: 52rem;
+  left: 5.5rem;
+}
+.ico8 {
+  background: url(../img/section1/section1-ico8-twocircle-hor.svg) no-repeat 50% / contain;
+  width: 5.5rem;
+  height: 4rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+}
+.ico9 {
+  background: url(../img/section1/section1-ico9-twocircle-ver.svg) no-repeat 50% / contain;
+  width: 3.2rem;
+  height: 5.5rem;
+  position: absolute;
+  top: 66rem;
+  left: 6rem;
+}
+.ico10 {
+  background: url(../img/section1/section1-ico10-boxframe.svg) no-repeat 50% / contain;
+  width: 67rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 5rem;
+  left: 125rem;
+}
+.ico11 {
+  background: url(../img/section1/section1-ico6.svg) no-repeat 50% / contain;
+  width: 18rem;
+  height: 3.9rem;
+  position: absolute;
+  top: 8rem;
+  right: 0rem;
+}
+
+.name > h1 {
+  font-size: 13rem;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  top: 11%;
+  left: 9%;
+}
+.circle-line {
+  position: absolute;
+  background: url(../img/section1/ico-circle-line.svg);
+  width: 15.4rem;
+  height: 15.4rem;
+  top: 5%;
+  left: 5%;
+}
+.name > p {
+  font-size: 13rem;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+}
+.name > p:nth-child(2) {
+  top: 27%;
+  left: 19%;
+}
+.box-color {
+  position: absolute;
+  width: 16rem;
+  height: 1.5rem;
+  background: url(../img/section1/section1-box-color.svg);
+  top: 30rem;
+  left: 54rem;
+}
+.star-line {
+  content: '';
+  position: absolute;
+  width: 21.2rem;
+  height: 9.65rem;
+  background: url(../img/section1/ico-star-line.svg) no-repeat 50% / contain;
+  top: 26rem;
+  left: 61.5rem;
+}
+.name > p:nth-child(3) {
+  top: 43%;
+  left: 18%;
+}
+.box-border {
+  width: 17rem;
+  height: 2.5rem;
+  background: url(../img/section1/section1-box-border.svg) no-repeat 50% / contain;
+  position: absolute;
+  top: 50%;
+  left: 8.5%;
+}
+
+h2 {
+  font-size: 13rem;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  right: 6.5rem;
+  bottom: 12rem;
+}
+.more {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  display: block;
+  position: absolute;
+  bottom: 15%;
+  left: 20%;
+  line-height: 1.1;
+}
+.arrow-down {
+  background: url(../img/section1/section-arrow-down-more.svg) no-repeat 50% / contain;
+  width: 4.65rem;
+  height: 14.1rem;
+  position: absolute;
+  bottom: 10%;
+  left: 17%;
+}
+
+/* section2: Profile */
+.section2 {
+  height: 100vh;
+  position: relative;
+  background: var(--main-color);
+}
+.section2-bg {
+  background: url(../img/section2-bg.svg) no-repeat 50% / contain;
+  position: absolute;
+  width: 70rem;
+  height: 60rem;
+  top: 35%;
+  left: -10%;
+}
+.section2-ico-title {
+  background: url(../img/section2-ico-title.svg) no-repeat 50% / contain;
+  position: absolute;
+  width: 19rem;
+  height: 8rem;
+  top: 11%;
+  left: 6.5%;
+}
+.profile {
+  display: flex;
+  padding: 8% 0 4% 0;
+}
+.section2 .profile-con > .sec-title {
+  font-family: 'ITC New Baskerville Std SmBdIt';
+  color: #fff;
+  font-size: 10rem;
+  transform: none;
+}
+
+.profile-con p {
+  display: block;
+  font-size: 10rem;
+  font-weight: 500;
+  font-family: Pretendard;
+  color: #fff;
+  margin-left: 11rem;
+  margin-top: -1rem;
+}
+
+.profile-con figure {
+  margin: 1.1rem 0 0 11rem;
+}
+.profile-name {
+  display: flex;
+}
+.profile-name strong {
+  display: block;
+  font-size: 7rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 1.1rem;
+  margin-left: 11rem;
+}
+.profile-name .section2-ico-arrow {
+  background: url(../img/section2-ico-arrow-down.svg) no-repeat 50% / contain;
+  width: 18rem;
+  height: 18rem;
+}
+
+.profile-info {
+  position: absolute;
+  right: 0;
+  bottom: 9%;
+  text-align: right;
+}
+.profile-info .section2-ico-star {
+  background: url(../img/section2-ico-star.svg) no-repeat 50% / contain;
+  width: 5rem;
+  height: 5rem;
+  display: block;
+  margin: 0 0 0 auto;
+}
+.profile-info p {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-top: 0.8rem;
+}
+.profile-info p:nth-of-type(1) {
+  margin-top: 2rem;
+}
+.profile-info p:nth-of-type(5) {
+  text-transform: lowercase;
+}
+
+/* section3: About ME*/
+.section3 {
+  width: 100%;
+  position: relative;
+  /* background: yellow; */
+  padding: 15rem 0 15rem 0;
+}
+.section3::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 4.3%;
+  width: 0.2rem;
+  height: 100%;
+  background: var(--main-color);
+  z-index: 10;
+}
+.section3 .sec-title {
+  font-family: 'ITC New Baskerville Std SmBdIt';
+  color: var(--main-color);
+  font-size: 6.5rem;
+  display: block;
+  position: absolute;
+  top: 32rem;
+  left: 2.3%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.about-me {
+  width: calc(100% - 4.3%);
+  margin-left: auto;
+}
+.sec3-1 {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 10rem;
+}
+.sec3-1-con {
+  color: var(--main-color);
+  text-align: left;
+  width: 60%;
+  height: 28rem;
+  padding: 0 10rem 0 20rem;
+}
+
+.sec3-1-con p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-top: 3.2rem;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  padding: 2rem 0 2rem 0;
+}
+.sec3-1 figure {
+  bottom: 0;
+}
+
+.sec3-2 {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10rem;
+}
+.sec3-2-con {
+  color: var(--main-color);
+  text-align: right;
+  width: 60%;
+  height: 28rem;
+  padding: 0 20rem 0 10rem;
+}
+
+.sec3-2-con p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-top: 3.2rem;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  padding: 2rem 0 2rem 0;
+}
+
+/* section4: Work Experience */
+.section4 {
+  width: 100%;
+  position: relative;
+  padding: 15rem 0 15rem 0;
+}
+.section4::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 4.3%;
+  width: 0.2rem;
+  height: 100%;
+  background: #fff;
+  z-index: 10;
+}
+.section4::after {
+  content: '';
+  display: block;
+  background: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.section4 .sec-title {
+  font-family: 'ITC New Baskerville Std SmBdIt';
+  color: #fff;
+  font-size: 6.5rem;
+  display: block;
+  position: absolute;
+  top: 40rem;
+  left: 2.3%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.work-exp {
+  width: calc(100% - 4.3%);
+  margin-left: auto;
+}
+.work-exp {
+  background: var(--main-color);
+  color: #fff;
+  width: calc(100% - 4.3%);
+  margin-left: auto;
+}
+.section3 dl dt,
+.section4 dl dt {
+  font-family: 'ITC New Baskerville Std SmBdIt';
+  font-size: 4rem;
+}
+.section3 dl dd,
+.section4 dl dd {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: -1rem;
+}
+.section4 strong {
+  font-size: 2.2rem;
+  display: block;
+  margin-top: 2rem;
+}
+.sec4-1 h4 {
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+.sec4-1-con {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10rem;
+  width: 127rem;
+  margin: 10rem auto 0 auto;
+}
+.sec4-1-con figure {
+  /* background: yellow; */
+}
+.sec4-1-text {
+  text-align: left;
+  width: 70rem;
+  padding: 0 0rem 0 20rem;
+  /* background: green; */
+}
+.sec4-1-smalltext {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-top: 3.2rem;
+  padding: 2rem 0 2rem 0;
+}
+
+.sec4-1-text p + p {
+  margin-top: 1rem;
+}
+
+.sec4-2 {
+  font-size: 3.8rem;
+  text-align: center;
+  padding-top: 4rem;
+  margin-top: 10rem;
+}
+.sec4-2-con {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10rem;
+  width: 150rem;
+  margin: 10rem auto 0 auto;
+}
+.sec4-2-text {
+  text-align: left;
+  width: 74rem;
+  padding: 0 20rem 0 0rem;
+  /* background: green; */
+}
+
+.sec4-2-smalltext {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-top: 3.2rem;
+  padding: 2rem 0 2rem 0;
+}
+.sec4-2-text p + p {
+  margin-top: 1rem;
+}
+
+/* section5: Works*/
+.section5 {
+  height: 100vh;
+  position: relative;
+  padding: 5rem 0 15rem 0;
+  /*  background: yellow; */
+}
+.section5::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 4.3%;
+  width: 0.2rem;
+  height: 100%;
+  background: var(--main-color);
+  z-index: 10;
+}
+.section5 .sec-title {
+  font-family: 'ITC New Baskerville Std SmBdIt';
+  color: var(--main-color);
+  font-size: 6.5rem;
+  display: block;
+  position: absolute;
+  top: 22rem;
+  left: 2.3%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.works-con {
+  padding: 5rem 0 15rem 15rem;
+}
+
+.works-list li {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.works-list li a {
+  position: relative;
+}
+
+.works-list li + li {
+  margin-top: 1rem;
+}
+
+.works-list li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 0%;
+  height: 0.5rem;
+  background: var(--main-color);
+  transition: 0.4s;
+}
+.works-list li a:hover::after {
+  width: 100%;
+}
+
+.works-list li a:hover {
+  font-weight: 700;
+}
+.works-list-info {
+  position: absolute;
+  bottom: 10rem;
+}
+
+.ux-ui {
+  color: var(--main-color);
+}
+
+.ux-ui dl {
+}
+.ux-ui dl dt {
+  font-size: 1.8rem;
+}
+.ux-ui dl dd {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.illustration {
+  display: none;
+}
+.graphic {
+  display: none;
+}
+
+.ux-ui-list {
+  color: var(--main-color);
+  font-size: 4rem;
+  font-weight: 600;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+.ux-ui-list li {
+  border: 1px solid var(--main-color);
+  width: 8rem;
+  display: block;
+  position: relative;
+  margin-left: -1px;
+}
+.ux-ui-list li a {
+  display: block;
+  height: 8rem;
+  line-height: 8rem;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  /*   border: 1px solid #000; */
+  position: absolute;
+  left: 0px;
+  bottom: -30px;
+}
+
+/* section5: work-box */
+.box-aladin {
+  width: 70rem;
+  height: 100%;
+  position: absolute;
+  right: 15.8rem;
+  top: 0;
+  background: #fff;
+  border: 1px solid var(--main-color);
+  text-align: center;
+  align-items: center;
+  color: var(--main-color);
+  padding: 3rem 5rem 3rem 5rem;
+}
+.box-con {
+}
+
+.box-aladin strong {
+  font-size: 9rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 2rem;
+}
+.box-aladin figure {
+  margin-top: 4rem;
+}
+.box-aladin figure img {
+  width: 41rem;
+  height: 45rem;
+  margin: 0 auto;
+}
+.box-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 7rem;
+}
+.box-bottom dl {
+  text-align: left;
+}
+.box-bottom dl dt {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.box-bottom dl dd {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-top: -1rem;
+}
+.box-bottom p {
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+}
+.box-bottom a {
+  background: url(../img/works-link-arrow.svg) no-repeat 50% / contain;
+  width: 6rem;
+  height: 6rem;
+  /*  border: 1px solid #000; */
+}

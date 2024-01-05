@@ -1,0 +1,154 @@
+@charset 'utf-8';
+
+/* 웹폰트 정의 */
+@import url('https://db.onlinewebfonts.com/c/d7b2787bf6a6d55a23f6a10f7a73b8d0?family=ITC+New+Baskerville+Std+SmBdIt');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  font-size: 100%; /* fz100p = 16px */
+  font-size: 62.5%; /* fz62.5p = 10px */
+  --main-color: #241be4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+label,
+button {
+  /* cup */
+  cursor: pointer;
+}
+
+body {
+  font: 1rem/1.5 'Pretendard', sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+  word-break: keep-all;
+  text-transform: capitalize;
+}
+.inner {
+  width: 154rem;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+#header {
+  height: 67px;
+  background: blue;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+  position: relative;
+}
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 2.8rem;
+  display: block;
+  width: 29rem;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo:hover {
+  background: #fff;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.menu {
+  width: 35px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2%;
+}
+
+.menu-line {
+  position: absolute;
+  width: 100%;
+  border-top: 2.5px solid white;
+}
+.menu-line:nth-of-type(1) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu-line:nth-of-type(3) {
+  top: 100%;
+}
+
+nav .gnb {
+  position: fixed;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 30;
+  border-bottom: 2px solid #fff;
+  padding: 0 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .gnb.active {
+  top: 0;
+}
+nav .gnb.hide {
+  top: -75px;
+}
+
+nav .gnb li {
+  color: #fff;
+  font-weight: 600;
+  font-size: 4.3rem;
+  transform: skewX(-12deg);
+  transition: 0.4s;
+}
+
+nav .gnb li a::after {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 0%;
+  height: 0.5rem;
+  background: #fff;
+  transition: 0.4s;
+}
+nav .gnb li a:hover::after {
+  width: 100%;
+}
+nav .gnb li a:hover {
+  color: #fff;
+}
