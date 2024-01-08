@@ -165,8 +165,8 @@
   height: 15.4rem;
   top: 7%;
   left: 6%;
-  -webkit-animation: rotate-center 1s ease-in-out both;
-  animation: rotate-center 1s ease-in-out both;
+  -webkit-animation: rotate-center 3s linear infinite both;
+  animation: rotate-center 3s linear infinite both;
 }
 
 @-webkit-keyframes rotate-center {
