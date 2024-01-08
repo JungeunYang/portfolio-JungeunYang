@@ -66,4 +66,93 @@ $(function () {
   //     $gnb.addClass('hide');
   //   }
   // });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // lenis
+  // const lenis = new Lenis({
+  //   duration: 1,
+  //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //   smoothWheel: true,
+  // });
+
+  // function raf(time) {
+  //   lenis.raf(time);
+  //   requestAnimationFrame(raf);
+  // }
+
+  // requestAnimationFrame(raf);
+
+  // lenis.on('scroll', ScrollTrigger.update);
+
+  // gsap.ticker.add((time) => {
+  //   lenis.raf(time * 1000);
+  // });
+
+  const horizontal = document.querySelector('.about-me');
+  const hCon = gsap.utils.toArray('.about-me > div');
+  console.log(
+    'horizontal.offsetWidth: ',
+    horizontal.offsetWidth,
+    'innerWidth: ',
+    innerWidth,
+    'scroll END: ',
+    horizontal.offsetWidth - innerWidth,
+    'hCon.length: ',
+    hCon.length
+  );
+
+  const tl4 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.section1',
+      start: '0% 0%',
+      end: '100% 0%',
+      pin: true,
+      markers: true,
+      scrub: 1,
+    },
+  });
+  tl4.from('.sec4-2 h4', { autoAlpha: 0, y: 100 });
+  tl4.from('.sec4-2-con', { autoAlpha: 0, y: 100 }, '-=.3');
+
+  const tl = gsap.to(hCon, {
+    xPercent: -100 * (hCon.length - 1),
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.section3',
+      start: '0% 0%',
+      end: () => '+=' + (horizontal.offsetWidth - innerWidth),
+      pin: true,
+      // markers: true,
+      scrub: 1,
+    },
+  });
+
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.section4',
+      start: '0% 0%',
+      end: '100% 0',
+      pin: true,
+      // markers: true,
+      scrub: 1,
+    },
+  });
+
+  tl2.from('.sec4-1 h4', { autoAlpha: 0, y: 100 });
+  tl2.from('.sec4-1-con', { autoAlpha: 0, y: 100 }, '-=.3');
+
+  const tl3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.section4',
+      start: '50% 0%',
+      end: '100% 0%',
+      pin: true,
+      // markers: true,
+      scrub: 1,
+    },
+  });
+  tl3.from('.sec4-2 h4', { autoAlpha: 0, y: 100 });
+  tl3.from('.sec4-2-con', { autoAlpha: 0, y: 100 }, '-=.3');
+  // 이소룡 참고
 });

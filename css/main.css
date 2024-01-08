@@ -163,9 +163,33 @@
   background: url(../img/section1/ico-circle-line.svg);
   width: 15.4rem;
   height: 15.4rem;
-  top: 5%;
-  left: 5%;
+  top: 7%;
+  left: 6%;
+  -webkit-animation: rotate-center 1s ease-in-out both;
+  animation: rotate-center 1s ease-in-out both;
 }
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 .name > p {
   font-size: 13rem;
   font-weight: 700;
@@ -326,7 +350,7 @@ h2 {
   width: 100%;
   position: relative;
   /* background: yellow; */
-  padding: 15rem 0 15rem 0;
+  height: 100vh;
 }
 .section3::before {
   content: '';
@@ -350,8 +374,16 @@ h2 {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 .about-me {
-  width: calc(100% - 4.3%);
-  margin-left: auto;
+  width: 200vw;
+  margin-left: 4.3%;
+  display: flex;
+  height: 100%;
+}
+.about-me > div {
+  width: 100vw;
+  flex-shrink: 0;
+  padding: 5vw;
+  /* border: 1px solid #000; */
 }
 .sec3-1 {
   display: flex;
@@ -363,7 +395,7 @@ h2 {
   text-align: left;
   width: 60%;
   height: 28rem;
-  padding: 0 10rem 0 20rem;
+  padding: 0 10rem 0 10rem;
 }
 
 .sec3-1-con p {
@@ -381,14 +413,13 @@ h2 {
 .sec3-2 {
   display: flex;
   align-items: flex-end;
-  margin-top: 10rem;
 }
 .sec3-2-con {
   color: var(--main-color);
   text-align: right;
   width: 60%;
   height: 28rem;
-  padding: 0 20rem 0 10rem;
+  padding: 0 10rem 0 10rem;
 }
 
 .sec3-2-con p {
@@ -404,7 +435,6 @@ h2 {
 .section4 {
   width: 100%;
   position: relative;
-  padding: 15rem 0 15rem 0;
 }
 .section4::before {
   content: '';
@@ -438,15 +468,13 @@ h2 {
   left: 2.3%;
   transform: translate(-50%, -50%) rotate(-90deg);
 }
-.work-exp {
-  width: calc(100% - 4.3%);
-  margin-left: auto;
-}
+
 .work-exp {
   background: var(--main-color);
   color: #fff;
   width: calc(100% - 4.3%);
   margin-left: auto;
+  padding: 15rem 0 15rem 0;
 }
 .section3 dl dt,
 .section4 dl dt {
@@ -472,17 +500,19 @@ h2 {
 .sec4-1-con {
   display: flex;
   align-items: flex-end;
-  margin-top: 10rem;
   width: 127rem;
-  margin: 10rem auto 0 auto;
-}
-.sec4-1-con figure {
+  margin: 5rem auto 0 auto;
   /* background: yellow; */
+  justify-content: center;
+}
+.sec4-1-con figure img {
+  width: 30rem;
+  height: 60rem;
 }
 .sec4-1-text {
   text-align: left;
   width: 70rem;
-  padding: 0 0rem 0 20rem;
+  padding: 0 0 0 10rem;
   /* background: green; */
 }
 .sec4-1-smalltext {
@@ -500,22 +530,24 @@ h2 {
 }
 
 .sec4-2 {
+  margin-top: 15rem;
+}
+
+.sec4-2 h4 {
   font-size: 3.8rem;
   text-align: center;
-  padding-top: 4rem;
-  margin-top: 10rem;
 }
 .sec4-2-con {
   display: flex;
   align-items: flex-end;
-  margin-top: 10rem;
+  margin: 5rem auto 0 auto;
   width: 150rem;
-  margin: 10rem auto 0 auto;
+  justify-content: center;
 }
 .sec4-2-text {
-  text-align: left;
-  width: 74rem;
-  padding: 0 20rem 0 0rem;
+  text-align: right;
+  width: 55rem;
+  padding: 0 10rem 0 0rem;
   /* background: green; */
 }
 
@@ -530,6 +562,10 @@ h2 {
 }
 .sec4-2-text p + p {
   margin-top: 1rem;
+}
+.sec4-2-con figure img {
+  width: 69rem;
+  height: 52rem;
 }
 
 /* section5: Works*/
