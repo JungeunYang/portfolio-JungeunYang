@@ -65,13 +65,13 @@ body {
   position: relative;
 }
 .logo {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 2.8rem;
   display: block;
-  width: 29rem;
-  padding: 0.5rem 0;
+  width: 22rem;
+  padding: 0.3rem 0;
   position: absolute;
   top: 50%;
   left: 50%;

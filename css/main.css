@@ -798,7 +798,7 @@ h2 {
 .section5 {
   height: 100vh;
   position: relative;
-  padding: 5rem 0 5rem 0;
+  padding: 5rem 0 0rem 0;
   /*  background: yellow; */
 }
 .section5::before {
