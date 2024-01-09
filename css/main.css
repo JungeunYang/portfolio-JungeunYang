@@ -1,5 +1,13 @@
 /* section1-visual */
-
+.view {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  border: 1px solid yellow;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 .visual {
   height: calc(100vh - 67px);
 
