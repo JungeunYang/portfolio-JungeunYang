@@ -14,6 +14,15 @@ $(function () {
   visualTL.to('.row1', { backgroundColor: 'var(--main-color)' });
   visualTL.to('.row2', { backgroundColor: 'var(--main-color)' });
   visualTL.to('.row3', { backgroundColor: 'var(--main-color)' });
+  visualTL.to('.row1', { backgroundColor: 'gray' });
+  visualTL.to('.row2', { backgroundColor: 'gray' });
+  visualTL.to('.row3', { backgroundColor: 'gray' });
+  visualTL.to('.row1', { backgroundColor: '#FF826F' });
+  visualTL.to('.row2', { backgroundColor: '#FF826F' });
+  visualTL.to('.row3', { backgroundColor: '#FF826F' });
+  visualTL.to('.row1', { backgroundColor: 'var(--main-color)' });
+  visualTL.to('.row2', { backgroundColor: 'var(--main-color)' });
+  visualTL.to('.row3', { backgroundColor: 'var(--main-color)' });
 
   /* 햄버거메뉴 */
   let i = 0;
