@@ -1,12 +1,15 @@
 /* section1-visual */
 .view {
-  width: 100%;
+  width: 40%;
   height: 100vh;
-  overflow: hidden;
-  border: 1px solid yellow;
   position: absolute;
   right: 0;
   bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+#start {
+  display: none;
 }
 .visual {
   height: calc(100vh - 67px);
@@ -526,32 +529,35 @@ h2 {
 
 .profile-con p {
   display: block;
-  font-size: 10rem;
-  font-weight: 500;
+  font-size: 5rem;
+  /* font-weight: 500; */
   font-family: Pretendard;
   color: #fff;
   margin-left: 11rem;
-  margin-top: -1rem;
+  margin-top: -4rem;
 }
 
 .profile-con figure {
-  margin: 1.1rem 0 0 11rem;
+  margin: 0 0 0 11rem;
 }
 .profile-name {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 87rem;
 }
 .profile-name strong {
   display: block;
-  font-size: 7rem;
-  font-weight: 600;
+  font-size: 8.5rem;
+  font-weight: 500;
   color: #fff;
-  margin-top: 1.1rem;
   margin-left: 11rem;
 }
 .profile-name .section2-ico-arrow {
   background: url(../img/section2-ico-arrow-down.svg) no-repeat 50% / contain;
-  width: 18rem;
-  height: 18rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  /* border: 1px solid #000; */
 }
 
 .profile-info {
@@ -568,12 +574,12 @@ h2 {
   margin: 0 0 0 auto;
 }
 .profile-info p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #fff;
-  margin-top: 0.8rem;
+  margin-top: 0.3rem;
 }
 .profile-info p:nth-of-type(1) {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .profile-info p:nth-of-type(5) {
   text-transform: lowercase;
@@ -946,6 +952,7 @@ h2 {
 .works-list-item li.active .works-list-item-detail {
   opacity: 1;
   transition: opacity 0.4s 0.3s;
+  cursor: initial;
 }
 
 .works-list-item-detail {
@@ -964,13 +971,45 @@ h2 {
   justify-content: space-between;
 }
 
-.box-con strong {
+.box-title span {
   font-size: 9rem;
   font-weight: 600;
   display: block;
   white-space: nowrap;
 }
+.box-title {
+  height: 125px;
+  width: 100%;
 
+  overflow: hidden;
+  position: relative;
+  /* border: 1px solid #000; */
+}
+
+.box-title div {
+  display: block;
+  width: 200%;
+  height: 100%;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 5s linear infinite;
+}
+
+.box-title span {
+  float: left;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
 .box-con figure {
 }
 

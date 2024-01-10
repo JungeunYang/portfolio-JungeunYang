@@ -24,98 +24,6 @@ $(function () {
   visualTL.to('.row2', { backgroundColor: 'var(--main-color)' });
   visualTL.to('.row3', { backgroundColor: 'var(--main-color)' });
 
-  // Matter.js module aliases
-  const { Engine, Render, Runner, Bodies, World } = Matter;
-
-  // Function to run the Matter.js animation
-  const runMatterAnimation = () => {
-    // Create an engine
-    const engine = Engine.create();
-
-    // Create a renderer within the .view element
-    const render = Render.create({
-      element: document.querySelector('.view'),
-      engine: engine,
-      options: {
-        width: window.innerWidth,
-        height: window.innerHeight,
-        background: 'transparent',
-        wireframes: false, // Set to true for wireframe view
-      },
-    });
-
-    // Create a runner
-    const runner = Runner.create();
-
-    // Add the runner to the engine
-    Runner.run(runner, engine);
-
-    // Create an array to hold the falling images
-    const fallingImages = [];
-
-    // Load images with filenames
-    const imageFilenames = Array.from({ length: 9 }, (_, index) => `img/item${index + 1}.svg`);
-
-    // Function to load images and create falling images with original sizes
-    const createFallingImage = (imageUrl, index) => {
-      const img = new Image();
-      img.onload = function () {
-        const angle = Math.random() * Math.PI * 2; // Random angle in radians
-        const fallingImage = Bodies.rectangle(
-          Math.random() * window.innerWidth,
-          Math.random() * -400, // Adjusted initial vertical position
-          img.width,
-          img.height,
-          {
-            render: {
-              sprite: {
-                texture: img.src,
-              },
-            },
-            restitution: 0.8, // Adjust restitution to control bouncing (0 = no bouncing, 1 = full bouncing)
-            friction: 0.7, // Adjust friction to control sliding on the ground
-            angle: angle, // Set the initial rotation angle
-            angularVelocity: 0.02 * (Math.random() - 0.5), // Random angular velocity for rotation
-          }
-        );
-        fallingImages.push(fallingImage);
-
-        if (index === imageFilenames.length - 1) {
-          // All images loaded, add them to the world
-          World.add(engine.world, fallingImages);
-        }
-      };
-      img.src = imageUrl;
-    };
-
-    // Add walls to prevent images from leaving the screen
-    const wallOptions = { isStatic: true, render: { visible: true, opacity: 0 } };
-    World.add(engine.world, [
-      Bodies.rectangle(window.innerWidth / 2, window.innerHeight, window.innerWidth, 1, wallOptions), // Bottom wall
-      Bodies.rectangle(window.innerWidth, window.innerHeight / 20, 100, window.innerHeight, wallOptions), // Right wall
-      Bodies.rectangle(0, window.innerHeight / 2, 100, window.innerHeight, wallOptions), // Left wall
-    ]);
-
-    // Set gravity to control falling speed
-    engine.world.gravity.y = 1.6; // Higher values increase gravity and cause objects to fall faster
-
-    // Stagger the creation of falling images with a delay
-    imageFilenames.forEach((imageUrl, index) => {
-      setTimeout(() => {
-        createFallingImage(imageUrl, index);
-      }, index * 100); // Adjust the delay (500 milliseconds)
-    });
-
-    // Run the engine
-    Matter.Runner.run(runner, engine);
-
-    // Run the renderer
-    Render.run(render);
-  };
-
-  // Run the animation when needed
-  runMatterAnimation();
-
   /* 햄버거메뉴 */
   let i = 0;
   //마우스 클릭했을때 햄버거 바가 엑스 되는거
@@ -145,9 +53,21 @@ $(function () {
     }
   });
 
+  // gnb 색상 변경
+
+  gsap.to('.gnb', {
+    background: '#241be4',
+    duration: 3,
+    scrollTrigger: {
+      trigger: '.section3',
+      markers: true,
+      start: 'top 0',
+    },
+  });
+
   // 마우스가 section2에 들어왔을 때
   // section2의 offset().top 값을 가지고 옴
-  // console.log($('.section2').offset().top);
+  console.log($('.section2').offset().top);
 
   $window.on('scroll', function () {
     // 사용자의 (세로)스크롤 값을 구해서
@@ -160,13 +80,13 @@ $(function () {
   });
 
   // 마우스 휠을 조작했을 때 : wheel
-  // $window.on('wheel', function (e) {
-  //   if (e.originalEvent.wheelDelta > 0) {
-  //     $gnb.removeClass('hide');
-  //   } else {
-  //     $gnb.addClass('hide');
-  //   }
-  // });
+  $window.on('wheel', function (e) {
+    if (e.originalEvent.wheelDelta > 0) {
+      $gnb.removeClass('hide');
+    } else {
+      $gnb.addClass('hide');
+    }
+  });
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -215,6 +135,35 @@ $(function () {
       scrub: 1,
     },
   });
+
+  const tlsub = gsap.timeline({
+    scrollTrigger: {
+      containerAnimation: tl,
+      trigger: '.sec3-1-con dl',
+      start: 'left 30%',
+      markers: true,
+    },
+  });
+
+  tlsub.from('.sec3-1-con dl', {
+    autoAlpha: 0,
+    y: 100,
+  });
+  tlsub.from(
+    '.sec3-1-con p',
+    {
+      autoAlpha: 0,
+      y: 100,
+    },
+    '-=.3'
+  );
+  tlsub.from(
+    '.sec3-1 figure',
+    {
+      clipPath: 'inset(0 100% 0 0)',
+    },
+    '-=.3'
+  );
 
   const tl2 = gsap.timeline({
     scrollTrigger: {
@@ -307,4 +256,14 @@ $(function () {
       });
     });
   }
+
+  gsap.from('.profile-info', {
+    autoAlpha: 0,
+    y: 100,
+    scrollTrigger: {
+      trigger: '.profile-info',
+      start: 'center 100%',
+      // markers: true,
+    },
+  });
 });

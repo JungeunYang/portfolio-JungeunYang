@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Jungeun Yang</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <!-- script:src -->
     <script src="./js/script.js"></script>
+    <script src="./js/matter.js"></script>
   </head>
   <body>
     <a href="#container" class="skip hidden">본문 바로가기</a>
@@ -69,7 +70,9 @@
             <div class="ico10"></div>
             <div class="ico11"></div>
           </div>
-          <div class="view"></div>
+          <div class="view">
+            <button id="start">START !</button>
+          </div>
           <div class="name">
             <h1>JUNGEUN</h1>
             <p>YA</p>
@@ -79,7 +82,6 @@
             <div class="circle-line"></div>
             <div class="star-line"></div>
           </div>
-          <h2>PORTFOLIO</h2>
         </div>
         <a href="#" class="more">WANT TO SEE MORE<br />ABOUT ME</a>
         <div class="arrow-down"></div>
@@ -227,7 +229,12 @@
 
                   <div class="works-list-item-detail">
                     <div class="box-con">
-                      <strong>Movie 'Aladin'</strong>
+                      <div class="box-title">
+                        <div>
+                          <span>Movie 'Aladin'</span>
+                          <span>Movie 'Aladin'</span>
+                        </div>
+                      </div>
                       <figure><img src="./img/works-aladin.png" alt="알라딘 마이크로사이트 미리보기" /></figure>
                       <div class="box-bottom">
                         <div class="box-text">
@@ -237,7 +244,7 @@
                           </dl>
                           <p>영화 ‘알라딘’ 마이크로사이트 디자인</p>
                         </div>
-                        <a href="aladin.html" class="box-link"></a>
+                        <a href="aladin.html" target="_blank" class="box-link"></a>
                       </div>
                     </div>
                   </div>
@@ -276,8 +283,6 @@
               </ul>
             </div>
           </div>
-
-          <ul class="box-aladin"></ul>
         </div>
       </section>
     </main>
