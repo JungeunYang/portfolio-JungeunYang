@@ -505,31 +505,31 @@ h2 {
   position: absolute;
   width: 70rem;
   height: 60rem;
-  top: 35%;
+  top: 25%;
   left: -10%;
 }
 .section2-ico-title {
   background: url(../img/section2-ico-title.svg) no-repeat 50% / contain;
   position: absolute;
-  width: 19rem;
-  height: 8rem;
-  top: 11%;
-  left: 6.5%;
+  width: 15rem;
+  height: 7rem;
+  top: 9.5%;
+  left: 7%;
 }
 .profile {
   display: flex;
-  padding: 8% 0 4% 0;
+  padding: 6% 0 4% 0;
 }
 .section2 .profile-con > .sec-title {
   font-family: 'ITC New Baskerville Std SmBdIt';
   color: #fff;
-  font-size: 10rem;
+  font-size: 5.5rem;
   transform: none;
 }
 
 .profile-con p {
   display: block;
-  font-size: 5rem;
+  font-size: 7rem;
   /* font-weight: 500; */
   font-family: Pretendard;
   color: #fff;
@@ -545,18 +545,19 @@ h2 {
   justify-content: space-between;
   align-items: center;
   width: 87rem;
+  margin-left: 100px;
 }
 .profile-name strong {
   display: block;
   font-size: 8.5rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
   margin-left: 11rem;
 }
 .profile-name .section2-ico-arrow {
   background: url(../img/section2-ico-arrow-down.svg) no-repeat 50% / contain;
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   /* border: 1px solid #000; */
 }
 
@@ -606,10 +607,10 @@ h2 {
 .section3 .sec-title {
   font-family: 'ITC New Baskerville Std SmBdIt';
   color: var(--main-color);
-  font-size: 6.5rem;
+  font-size: 5.5rem;
   display: block;
   position: absolute;
-  top: 32rem;
+  top: 25rem;
   left: 2.3%;
   transform: translate(-50%, -50%) rotate(-90deg);
 }
@@ -634,11 +635,10 @@ h2 {
   color: var(--main-color);
   text-align: left;
   width: 60%;
-  height: 28rem;
-  padding: 0 10rem 0 10rem;
+  padding: 0 5rem 0 10rem;
 }
 
-.sec3-1-con p {
+.section3 p {
   font-size: 1.8rem;
   line-height: 1.5;
   margin-top: 3.2rem;
@@ -658,18 +658,17 @@ h2 {
   color: var(--main-color);
   text-align: right;
   width: 60%;
-  height: 28rem;
-  padding: 0 10rem 0 10rem;
+  padding: 0 10rem 0 5rem;
 }
 
-.sec3-2-con p {
+/* .sec3-2-con p {
   font-size: 1.8rem;
   line-height: 1.5;
   margin-top: 3.2rem;
   border-top: 1px solid var(--main-color);
   border-bottom: 1px solid var(--main-color);
   padding: 2rem 0 2rem 0;
-}
+} */
 
 /* section4: Work Experience */
 .section4 {
@@ -701,10 +700,10 @@ h2 {
 .section4 .sec-title {
   font-family: 'ITC New Baskerville Std SmBdIt';
   color: #fff;
-  font-size: 6.5rem;
+  font-size: 5.5rem;
   display: block;
   position: absolute;
-  top: 40rem;
+  top: 35rem;
   left: 2.3%;
   transform: translate(-50%, -50%) rotate(-90deg);
 }
@@ -812,7 +811,7 @@ h2 {
 .section5 {
   height: 100vh;
   position: relative;
-  padding: 5rem 0 0rem 0;
+  padding: 0rem 0 0rem 0;
   /*  background: yellow; */
 }
 .section5::before {
@@ -829,15 +828,15 @@ h2 {
 .section5 .sec-title {
   font-family: 'ITC New Baskerville Std SmBdIt';
   color: var(--main-color);
-  font-size: 6.5rem;
+  font-size: 5.5rem;
   display: block;
   position: absolute;
-  top: 22rem;
+  top: 21rem;
   left: 2.3%;
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 .works-con {
-  padding: 5rem 0 5rem 15rem;
+  padding: 5rem 0 0rem 15rem;
   height: 100vh;
 }
 .works-list {
@@ -901,18 +900,18 @@ h2 {
 }
 
 .works-list-info dl dt {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
 }
 .works-list-info dl dd {
-  font-size: 5rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
+  font-size: 8rem;
+  font-weight: 700;
+  margin: 0.5rem 0 5rem 0;
 }
 
 /* works-list-detail */
 .works-list-item {
   color: var(--main-color);
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 600;
   position: absolute;
   top: 0;
@@ -938,7 +937,7 @@ h2 {
   transform-origin: 0 0;
   position: absolute;
   left: 0px;
-  bottom: -30px;
+  bottom: -25px;
   transition: 0.4s;
 }
 .works-list-item > li.active > a {
@@ -976,6 +975,8 @@ h2 {
   font-weight: 600;
   display: block;
   white-space: nowrap;
+  float: left;
+  width: 50%;
 }
 .box-title {
   height: 125px;
@@ -995,11 +996,6 @@ h2 {
   overflow: hidden;
 
   animation: marquee 5s linear infinite;
-}
-
-.box-title span {
-  float: left;
-  width: 50%;
 }
 
 @keyframes marquee {

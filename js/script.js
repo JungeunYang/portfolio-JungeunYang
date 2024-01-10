@@ -5,7 +5,7 @@ $(function () {
   const $gnb = $('nav > .gnb');
 
   // visualTL.set('.row1, .row2, .row3', { backgroundColor: 'blue' });
-  visualTL.to('.row1', { backgroundColor: 'gray' });
+  visualTL.to('.row1', { backgroundColor: 'gray' }, '+=2');
   visualTL.to('.row2', { backgroundColor: 'gray' });
   visualTL.to('.row3', { backgroundColor: 'gray' });
   visualTL.to('.row1', { backgroundColor: '#FF826F' });
@@ -29,64 +29,52 @@ $(function () {
   //마우스 클릭했을때 햄버거 바가 엑스 되는거
   $('.menu').on('click', function (e) {
     e.preventDefault;
-
-    if (i == 0) {
-      $('.menu-line:nth-of-type(2)').animate({ top: '50%' }, function () {
-        $('.menu-line:nth-of-type(1)').css({ display: 'none' });
-        $('.menu-line:nth-of-type(2)').animate({ rotate: '45deg' });
-      });
-      $('.menu-line:nth-of-type(3)').animate({ top: '50%' }, function () {
-        $('.menu-line:nth-of-type(3)').animate({ rotate: '-45deg' });
-      });
-      i += 1;
-    }
-    // 마우스 한번 더 클릭했을 때 엑스가 햄버거 바가 되는거
-    else {
-      $('.menu-line:nth-of-type(2)').animate({ rotate: '0deg' }, function () {
-        $('.menu-line:nth-of-type(1)').css({ display: 'block' });
-        $('.menu-line:nth-of-type(2)').animate({ top: '0', transform: 'trnaslateY(-50%)' });
-      });
-      $('.menu-line:nth-of-type(3)').animate({ rotate: '0deg' }, function () {
-        $('.menu-line:nth-of-type(3)').animate({ top: '100%' });
-      });
-      i -= 1;
-    }
+    $('.menu').toggleClass('active');
   });
-
-  // gnb 색상 변경
-
-  gsap.to('.gnb', {
-    background: '#241be4',
-    duration: 3,
-    scrollTrigger: {
-      trigger: '.section3',
-      markers: true,
-      start: 'top 0',
-    },
-  });
-
-  // 마우스가 section2에 들어왔을 때
-  // section2의 offset().top 값을 가지고 옴
-  console.log($('.section2').offset().top);
 
   $window.on('scroll', function () {
     // 사용자의 (세로)스크롤 값을 구해서
     let scrollTop = $(this).scrollTop();
+
     if (scrollTop >= $('.section2').offset().top) {
       $gnb.addClass('active');
     } else {
       $gnb.removeClass('active');
     }
-  });
+    if (scrollTop >= $('.section2').offset().top && scrollTop < $('.section3').offset().top) {
+      $gnb.removeClass('white');
+    }
 
-  // 마우스 휠을 조작했을 때 : wheel
-  $window.on('wheel', function (e) {
-    if (e.originalEvent.wheelDelta > 0) {
-      $gnb.removeClass('hide');
-    } else {
-      $gnb.addClass('hide');
+    if (scrollTop >= $('.section3').offset().top && scrollTop < $('.section4').offset().top) {
+      $gnb.addClass('white');
+    }
+    if (scrollTop >= $('.section4').offset().top && scrollTop < $('.section5').offset().top) {
+      $gnb.removeClass('white');
+    }
+
+    if (scrollTop >= $('.section5').offset().top) {
+      $gnb.addClass('white');
     }
   });
+
+  // $window.on('scroll', function () {
+  //   // 사용자의 (세로)스크롤 값을 구해서
+  //   let scrollTop = $(this).scrollTop();
+  //   if (scrollTop >= $('.section2') || scrollTop <= $('.section3') || scrollTop >= $('.section4') || scrollTop <= $('.section5')).offset().top) {
+  //     $gnb.addClass('blue');
+  //   } else {
+  //     $gnb.removeClass('blue');
+  //   }
+  // });
+
+  // 마우스 휠을 조작했을 때 : wheel
+  // $window.on('wheel', function (e) {
+  //   if (e.originalEvent.wheelDelta > 0) {
+  //     $gnb.removeClass('hide');
+  //   } else {
+  //     $gnb.addClass('hide');
+  //   }
+  // });
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -141,7 +129,7 @@ $(function () {
       containerAnimation: tl,
       trigger: '.sec3-1-con dl',
       start: 'left 30%',
-      markers: true,
+      // markers: true,
     },
   });
 
@@ -161,6 +149,36 @@ $(function () {
     '.sec3-1 figure',
     {
       clipPath: 'inset(0 100% 0 0)',
+    },
+    '-=.3'
+  );
+
+  const tlsub2 = gsap.timeline({
+    scrollTrigger: {
+      containerAnimation: tl,
+      trigger: '.sec3-2 figure',
+      start: 'left 40%',
+      // markers: true,
+    },
+  });
+
+  tlsub2.from(
+    '.sec3-2 figure',
+    {
+      clipPath: 'inset(0 100% 0 0)',
+    },
+    '-=.3'
+  );
+  tlsub2.from('.sec3-2-con dl', {
+    autoAlpha: 0,
+    y: 100,
+    delay: 0.5,
+  });
+  tlsub2.from(
+    '.sec3-2-con p',
+    {
+      autoAlpha: 0,
+      y: 100,
     },
     '-=.3'
   );
@@ -260,6 +278,7 @@ $(function () {
   gsap.from('.profile-info', {
     autoAlpha: 0,
     y: 100,
+    duration: 1,
     scrollTrigger: {
       trigger: '.profile-info',
       start: 'center 100%',

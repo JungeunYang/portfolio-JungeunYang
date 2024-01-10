@@ -93,4 +93,6 @@ const runMatterAnimation = () => {
 };
 
 // Run the animation when the document is fully loaded
-document.addEventListener('DOMContentLoaded', runMatterAnimation);
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(runMatterAnimation, 1000);
+});

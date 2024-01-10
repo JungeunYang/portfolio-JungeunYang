@@ -17,14 +17,48 @@
     <!-- script:src -->
     <script src="./js/script.js"></script>
     <script src="./js/matter.js"></script>
+
+    <script>
+      $(function () {
+        const $win = $(window);
+        const $loading = $('.loading');
+
+        $win.on('load', function () {
+          setTimeout(function () {
+            gsap.to($loading, {
+              clipPath: 'inset(100% 0 0 0)',
+              duration: 1,
+              ease: 'power4.inOut',
+            });
+          }, 500);
+        });
+      });
+    </script>
   </head>
   <body>
+    <div class="loading">
+      <div>
+        <span><img src="./img/loading1.svg" alt="" /></span>
+        <span><img src="./img/loading1.svg" alt="" /></span>
+      </div>
+      <div>
+        <span><img src="./img/loading2.svg" alt="" /></span>
+        <span><img src="./img/loading2.svg" alt="" /></span>
+      </div>
+      <div>
+        <span><img src="./img/loading3.svg" alt="" /></span>
+        <span><img src="./img/loading3.svg" alt="" /></span>
+      </div>
+    </div>
+
     <a href="#container" class="skip hidden">본문 바로가기</a>
     <hr />
     <header id="header">
-      <a href="./index.html" class="logo">JUNGEUN YANG</a>
+      <a href="./index.html" class="logo">
+        <div><span>J U N G E U N Y A N G</span><span>J U N G E U N Y A N G</span></div>
+      </a>
+
       <a href="#" class="menu">
-        <div class="menu-line"></div>
         <div class="menu-line"></div>
         <div class="menu-line"></div>
       </a>
@@ -105,7 +139,7 @@
               <p>UX/UI DESIGNER.</p>
               <figure><img src="./img/profile-img.png" alt="프로필사진" /></figure>
               <div class="profile-name">
-                <strong>YANG JUNGEUN</strong>
+                <strong>JUNGEUN YANG</strong>
                 <div class="section2-ico-arrow"></div>
               </div>
             </div>
