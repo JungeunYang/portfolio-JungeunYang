@@ -78,70 +78,8 @@
   position: absolute;
   top: 31rem;
   left: 41rem;
-  -webkit-animation: flicker-1 3s linear infinite both;
-  animation: flicker-1 3s linear infinite both;
 }
 
-@-webkit-keyframes flicker-1 {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  41.99% {
-    opacity: 1;
-  }
-  42% {
-    opacity: 0;
-  }
-  43% {
-    opacity: 0;
-  }
-  43.01% {
-    opacity: 1;
-  }
-  47.99% {
-    opacity: 1;
-  }
-  48% {
-    opacity: 0;
-  }
-  49% {
-    opacity: 0;
-  }
-  49.01% {
-    opacity: 1;
-  }
-}
-@keyframes flicker-1 {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  41.99% {
-    opacity: 1;
-  }
-  42% {
-    opacity: 0;
-  }
-  43% {
-    opacity: 0;
-  }
-  43.01% {
-    opacity: 1;
-  }
-  47.99% {
-    opacity: 1;
-  }
-  48% {
-    opacity: 0;
-  }
-  49% {
-    opacity: 0;
-  }
-  49.01% {
-    opacity: 1;
-  }
-}
 .ico2 {
   background: url(../img/section1/section1-ico1.svg) no-repeat 50% / contain;
   width: 35rem;
@@ -157,8 +95,6 @@
   position: absolute;
   top: 50rem;
   left: 103rem;
-  -webkit-animation: flicker-1 2s linear infinite both;
-  animation: flicker-1 2s linear infinite both;
 }
 .ico4 {
   background: url(../img/section1/section1-ico4.svg) no-repeat 50% / contain;
@@ -410,8 +346,8 @@
   width: 67rem;
   height: 2.4rem;
   position: absolute;
-  top: 5rem;
-  left: 125rem;
+  top: 6%;
+  right: -2%;
 }
 .ico11 {
   background: url(../img/section1/section1-ico6.svg) no-repeat 50% / contain;
@@ -509,7 +445,7 @@
   background: url(../img/section1/section1-box-color.svg);
   /* top: 30rem; */
   top: 35%;
-  left: 38%;
+  left: 30%;
 }
 .star-line {
   content: '';
@@ -549,7 +485,7 @@
 
 .name > p:nth-child(3) {
   top: 40%;
-  left: 18%;
+  left: 19%;
 }
 .box-border {
   width: 17rem;
@@ -569,8 +505,7 @@ h2 {
   bottom: 12rem;
 }
 .more {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.5rem;
   color: #fff;
   display: block;
   position: absolute;
@@ -578,13 +513,33 @@ h2 {
   left: 20%;
   line-height: 1.1;
 }
+.more:hover {
+  color: #fff;
+}
 .arrow-down {
   background: url(../img/section1/section-arrow-down-more.svg) no-repeat 50% / contain;
   width: 4.65rem;
   height: 14.1rem;
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   left: 17%;
+  animation: arrow-ani 2s infinite 0.5s;
+}
+@keyframes arrow-ani {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    bottom: 5%;
+  }
+  75% {
+    bottom: 14%;
+  }
+  100% {
+    opacity: 0;
+    bottom: 12%;
+  }
 }
 
 /* section2: Profile */
@@ -606,23 +561,22 @@ h2 {
   position: absolute;
   width: 15rem;
   height: 7rem;
-  top: 9.5%;
-  left: 7%;
+  top: 13%;
+  left: 12.5%;
 }
 .profile {
   display: flex;
   padding: 6% 0 4% 0;
 }
-.section2 .profile-con > .sec-title {
-  font-family: 'ITC New Baskerville Std SmBdIt';
-  color: #fff;
-  font-size: 5.5rem;
-  transform: none;
+
+.profile-con {
+  position: absolute;
+  top: 20%;
 }
 
 .profile-con p {
   display: block;
-  font-size: 7rem;
+  font-size: 5rem;
   /* font-weight: 500; */
   font-family: Pretendard;
   color: #fff;
@@ -642,8 +596,8 @@ h2 {
 }
 .profile-name strong {
   display: block;
-  font-size: 8.5rem;
-  font-weight: 600;
+  font-size: 9rem;
+  font-weight: 800;
   color: #fff;
   margin-left: 11rem;
 }
@@ -703,10 +657,12 @@ h2 {
   font-size: 5.5rem;
   display: block;
   position: absolute;
-  top: 25rem;
+  top: 24rem;
   left: 2.3%;
   transform: translate(-50%, -50%) rotate(-90deg);
+  z-index: 12;
 }
+
 .about-me {
   width: 200vw;
   margin-left: 4.3%;
@@ -723,21 +679,22 @@ h2 {
   display: flex;
   align-items: flex-end;
   padding-top: 10rem;
+  justify-content: center;
 }
 .sec3-1-con {
   color: var(--main-color);
   text-align: left;
-  width: 60%;
-  padding: 0 5rem 0 10rem;
+  width: 30%;
+  padding: 0 7rem 0 0rem;
 }
 
 .section3 p {
-  font-size: 1.8rem;
-  line-height: 1.5;
+  font-size: 2.4rem;
+  line-height: 1.6;
   margin-top: 3.2rem;
   border-top: 1px solid var(--main-color);
   border-bottom: 1px solid var(--main-color);
-  padding: 2rem 0 2rem 0;
+  padding: 5rem 0 5rem 0;
 }
 .sec3-1 figure {
   bottom: 0;
@@ -746,12 +703,13 @@ h2 {
 .sec3-2 {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
 }
 .sec3-2-con {
   color: var(--main-color);
   text-align: right;
-  width: 60%;
-  padding: 0 10rem 0 5rem;
+  width: 35%;
+  padding: 0 0rem 0 7rem;
 }
 
 /* .sec3-2-con p {
@@ -811,11 +769,12 @@ h2 {
 .section3 dl dt,
 .section4 dl dt {
   font-family: 'ITC New Baskerville Std SmBdIt';
-  font-size: 4rem;
+  font-size: 6rem;
+  line-height: 1.2;
 }
 .section3 dl dd,
 .section4 dl dd {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 600;
   margin-top: -1rem;
 }
@@ -825,10 +784,12 @@ h2 {
   margin-top: 2rem;
 }
 .sec4-1 h4 {
-  font-size: 3.8rem;
+  font-size: 4rem;
   text-align: center;
 }
-
+.sec4-1 h4 b {
+  font-family: 'ITC New Baskerville Std SmBdIt';
+}
 .sec4-1-con {
   display: flex;
   align-items: flex-end;
@@ -868,6 +829,9 @@ h2 {
 .sec4-2 h4 {
   font-size: 3.8rem;
   text-align: center;
+}
+.sec4-2 h4 b {
+  font-family: 'ITC New Baskerville Std SmBdIt';
 }
 .sec4-2-con {
   display: flex;
