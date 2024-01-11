@@ -25,16 +25,22 @@ $(function () {
   visualTL.to('.row3', { backgroundColor: 'var(--main-color)' });
 
   /* 햄버거메뉴 */
-  let i = 0;
   //마우스 클릭했을때 햄버거 바가 엑스 되는거
   $('.menu').on('click', function (e) {
     e.preventDefault;
-    $('.menu').toggleClass('active');
+
+    const tlMenu = gsap.timeline();
+
+    tlMenu.to('.menu-line:nth-of-type(1)', { top: '50%', bottom: 'auto', yPercent: -50 });
+    tlMenu.to('.menu-line:nth-of-type(2)', { top: '50%', bottom: 'auto', yPercent: -50 }, '<');
+    tlMenu.to('.menu-line:nth-of-type(1)', { rotation: 45 }, '+=0.6');
+    tlMenu.to('.menu-line:nth-of-type(2)', { rotation: -45 }, '<');
   });
 
   $window.on('scroll', function () {
     // 사용자의 (세로)스크롤 값을 구해서
     let scrollTop = $(this).scrollTop();
+    const $gnbMenu = $('.gnb > li');
 
     if (scrollTop >= $('.section2').offset().top) {
       $gnb.addClass('active');
@@ -43,42 +49,31 @@ $(function () {
     }
     if (scrollTop >= $('.section2').offset().top && scrollTop < $('.section3').offset().top) {
       $gnb.removeClass('white');
+      $gnbMenu.removeClass('on');
+      $gnbMenu.eq(0).addClass('on');
     }
 
     if (scrollTop >= $('.section3').offset().top && scrollTop < $('.section4').offset().top) {
       $gnb.addClass('white');
+      $gnbMenu.removeClass('on');
+      $gnbMenu.eq(1).addClass('on');
     }
     if (scrollTop >= $('.section4').offset().top && scrollTop < $('.section5').offset().top) {
       $gnb.removeClass('white');
+      $gnbMenu.removeClass('on');
+      $gnbMenu.eq(2).addClass('on');
     }
 
     if (scrollTop >= $('.section5').offset().top) {
       $gnb.addClass('white');
+      $gnbMenu.removeClass('on');
+      $gnbMenu.eq(3).addClass('on');
     }
   });
 
-  // $window.on('scroll', function () {
-  //   // 사용자의 (세로)스크롤 값을 구해서
-  //   let scrollTop = $(this).scrollTop();
-  //   if (scrollTop >= $('.section2') || scrollTop <= $('.section3') || scrollTop >= $('.section4') || scrollTop <= $('.section5')).offset().top) {
-  //     $gnb.addClass('blue');
-  //   } else {
-  //     $gnb.removeClass('blue');
-  //   }
-  // });
-
-  // 마우스 휠을 조작했을 때 : wheel
-  // $window.on('wheel', function (e) {
-  //   if (e.originalEvent.wheelDelta > 0) {
-  //     $gnb.removeClass('hide');
-  //   } else {
-  //     $gnb.addClass('hide');
-  //   }
-  // });
-
   gsap.registerPlugin(ScrollTrigger);
 
-  // lenis
+  // lenis;
   // const lenis = new Lenis({
   //   duration: 1,
   //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
