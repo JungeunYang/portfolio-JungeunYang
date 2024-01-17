@@ -158,19 +158,19 @@ body {
 
 #header .popup-menu {
   position: fixed;
-  left: 1920px;
-  right: 0;
+  right: -100%;
   top: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   display: none;
   z-index: 2;
-  border: 5px solid yellow;
+  /* border: 5px solid yellow; */
+  display: flex;
   transition: 0.4s;
 }
 
 #header .popup-menu.active {
-  display: flex;
-  left: 0;
+  right: 0;
 }
 #header .popup-menu .bg {
   background-color: #000;
