@@ -1,388 +1,442 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jungeun Yang</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="shortcut icon" href="./img/favicon.png" type="favicon" />
-    <!-- jQuery core -->
-    <script src="./js/jquery-3.7.0.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
-    <!-- script:src -->
-    <script src="./js/script.js"></script>
-    <script src="./js/matter.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jungeun Yang</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/common.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="shortcut icon" href="./img/favicon.png" type="favicon" />
+		<!-- jQuery core -->
+		<script src="./js/jquery-3.7.0.min.js"></script>
+		<script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+		<!-- script:src -->
+		<script src="./js/script.js"></script>
+		<script src="./js/matter.js"></script>
 
-    <script>
-      $(function () {
-        const $win = $(window);
-        const $loading = $('.loading');
+		<script>
+			$(function () {
+				const $win = $(window);
+				const $loading = $('.loading');
 
-        $win.on('load', function () {
-          setTimeout(function () {
-            gsap.to($loading, {
-              clipPath: 'inset(100% 0 0 0)',
-              duration: 1,
-              ease: 'power4.inOut',
-            });
-          }, 500);
-        });
-      });
-    </script>
-  </head>
-  <body>
-    <div class="loading">
-      <div>
-        <span><img src="./img/loading1.svg" alt="" /></span>
-        <span><img src="./img/loading1.svg" alt="" /></span>
-      </div>
-      <div>
-        <span><img src="./img/loading2.svg" alt="" /></span>
-        <span><img src="./img/loading2.svg" alt="" /></span>
-      </div>
-      <div>
-        <span><img src="./img/loading3.svg" alt="" /></span>
-        <span><img src="./img/loading3.svg" alt="" /></span>
-      </div>
-    </div>
+				$win.on('load', function () {
+					setTimeout(function () {
+						gsap.to($loading, {
+							clipPath: 'inset(100% 0 0 0)',
+							duration: 1,
+							ease: 'power4.inOut',
+						});
+					}, 500);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="loading">
+			<div>
+				<span><img src="./img/loading1.svg" alt="" /></span>
+				<span><img src="./img/loading1.svg" alt="" /></span>
+			</div>
+			<div>
+				<span><img src="./img/loading2.svg" alt="" /></span>
+				<span><img src="./img/loading2.svg" alt="" /></span>
+			</div>
+			<div>
+				<span><img src="./img/loading3.svg" alt="" /></span>
+				<span><img src="./img/loading3.svg" alt="" /></span>
+			</div>
+		</div>
 
-    <a href="#container" class="skip hidden">본문 바로가기</a>
-    <hr />
+		<a href="#container" class="skip hidden">본문 바로가기</a>
+		<hr />
 
-    <header id="header">
-      <a href="./index.html" class="logo">
-        <div><span>J U N G E U N Y A N G</span><span>J U N G E U N Y A N G</span></div>
-      </a>
-      <div class="popup-menu">
-        <div class="bg"></div>
-        <div class="top-menu">
-          <div class="popup-image">
-            <figure><img src="./img/popup-image.png" alt="" /></figure>
-          </div>
-          <ul class="popup-main-menu">
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#about-me">About me</a></li>
-            <li><a href="#work-experience">Work Experience</a></li>
-            <li><a href="#works">Works</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="navbar-button">
-        <input id="toggle-button" type="checkbox" />
-        <label class="line" for="toggle-button">
-          <div class="top"></div>
-          <div class="middle"></div>
-          <!-- <div class="bottom"></div> -->
-        </label>
-      </div>
-    </header>
-    <hr />
+		<header id="header">
+			<a href="./index.html" class="logo">
+				<div>
+					<span>J U N G E U N Y A N G</span><span>J U N G E U N Y A N G</span>
+				</div>
+			</a>
+			<div class="popup-menu">
+				<div class="bg"></div>
+				<div class="top-menu">
+					<div class="popup-image">
+						<figure><img src="./img/popup-image.png" alt="" /></figure>
+					</div>
+					<ul class="popup-main-menu">
+						<li><a href="#profile">Profile</a></li>
+						<li><a href="#about-me">About me</a></li>
+						<li><a href="#work-experience">Work Experience</a></li>
+						<li><a href="#works">Works</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="navbar-button">
+				<input id="toggle-button" type="checkbox" />
+				<label class="line" for="toggle-button">
+					<div class="top"></div>
+					<div class="middle"></div>
+					<!-- <div class="bottom"></div> -->
+				</label>
+			</div>
+		</header>
+		<hr />
 
-    <main id="container">
-      <section class="visual">
-        <div class="visual-grid-container">
-          <div class="visual-grid-item row1"></div>
-          <div class="visual-grid-item row1"></div>
-          <div class="visual-grid-item row1"></div>
-          <div class="visual-grid-item row1"></div>
-          <div class="visual-grid-item row1"></div>
-          <div class="visual-grid-item row1"></div>
-          <div class="visual-grid-item row1"></div>
-          <div class="visual-grid-item row2"></div>
-          <div class="visual-grid-item row2"></div>
-          <div class="visual-grid-item row2"></div>
-          <div class="visual-grid-item row2"></div>
-          <div class="visual-grid-item row2"></div>
-          <div class="visual-grid-item row2"></div>
-          <div class="visual-grid-item row2"></div>
-          <div class="visual-grid-item row3"></div>
-          <div class="visual-grid-item row3"></div>
-          <div class="visual-grid-item row3"></div>
-          <div class="visual-grid-item row3"></div>
-          <div class="visual-grid-item row3"></div>
-          <div class="visual-grid-item row3"></div>
-          <div class="visual-grid-item row3"></div>
-        </div>
+		<main id="container">
+			<section class="visual">
+				<div class="visual-grid-container">
+					<div class="visual-grid-item row1"></div>
+					<div class="visual-grid-item row1"></div>
+					<div class="visual-grid-item row1"></div>
+					<div class="visual-grid-item row1"></div>
+					<div class="visual-grid-item row1"></div>
+					<div class="visual-grid-item row1"></div>
+					<div class="visual-grid-item row1"></div>
+					<div class="visual-grid-item row2"></div>
+					<div class="visual-grid-item row2"></div>
+					<div class="visual-grid-item row2"></div>
+					<div class="visual-grid-item row2"></div>
+					<div class="visual-grid-item row2"></div>
+					<div class="visual-grid-item row2"></div>
+					<div class="visual-grid-item row2"></div>
+					<div class="visual-grid-item row3"></div>
+					<div class="visual-grid-item row3"></div>
+					<div class="visual-grid-item row3"></div>
+					<div class="visual-grid-item row3"></div>
+					<div class="visual-grid-item row3"></div>
+					<div class="visual-grid-item row3"></div>
+					<div class="visual-grid-item row3"></div>
+				</div>
 
-        <div class="visual-bg">
-          <div class="ico">
-            <div class="ico1"></div>
-            <div class="ico2"></div>
-            <div class="ico3"></div>
-            <div class="ico4"></div>
-            <div class="ico5"></div>
-            <div class="ico6"></div>
-            <div class="ico7"></div>
-            <div class="ico8"></div>
-            <div class="ico9"></div>
-            <div class="ico10"></div>
-            <div class="ico11"></div>
-          </div>
-          <div class="view">
-            <button id="start">START !</button>
-          </div>
-          <div class="name">
-            <h1>JUNGEUN</h1>
-            <p>YA</p>
-            <p>NG</p>
-            <div class="box-color"></div>
-            <div class="box-border"></div>
-            <div class="circle-line"></div>
-            <div class="star-line"></div>
-          </div>
-        </div>
+				<div class="visual-bg">
+					<div class="ico">
+						<div class="ico1"></div>
+						<div class="ico2"></div>
+						<div class="ico3"></div>
+						<div class="ico4"></div>
+						<div class="ico5"></div>
+						<div class="ico6"></div>
+						<div class="ico7"></div>
+						<div class="ico8"></div>
+						<div class="ico9"></div>
+						<div class="ico10"></div>
+						<div class="ico11"></div>
+					</div>
+					<div class="view">
+						<button id="start">START !</button>
+					</div>
+					<div class="name">
+						<h1>JUNGEUN</h1>
+						<p>YA</p>
+						<p>NG</p>
+						<div class="box-color"></div>
+						<div class="box-border"></div>
+						<div class="circle-line"></div>
+						<div class="star-line"></div>
+					</div>
+				</div>
 
-        <a href="#about-me" class="more">WANT TO SEE<br />ABOUT ME</a>
-        <div class="arrow-down"></div>
-      </section>
+				<a href="#about-me" class="more">WANT TO SEE<br />ABOUT ME</a>
+				<div class="arrow-down"></div>
+			</section>
 
-      <nav>
-        <ul class="gnb">
-          <li><a href="#profile">PROFILE</a></li>
-          <li><a href="#about-me">ABOUT ME</a></li>
-          <li><a href="#work-experience">WORK EXPERIENCE</a></li>
-          <li><a href="#works">WORKS</a></li>
-        </ul>
-      </nav>
+			<nav>
+				<ul class="gnb">
+					<li><a href="#profile">PROFILE</a></li>
+					<li><a href="#about-me">ABOUT ME</a></li>
+					<li><a href="#work-experience">WORK EXPERIENCE</a></li>
+					<li><a href="#works">WORKS</a></li>
+				</ul>
+			</nav>
 
-      <section class="section2" id="profile">
-        <div class="section2-bg"></div>
-        <div class="section2-ico-title"></div>
-        <div class="inner">
-          <div class="profile">
-            <div class="profile-con">
-              <p>UX/UI DESIGNER.</p>
-              <figure><img src="./img/profile-img.png" alt="프로필사진" /></figure>
-              <div class="profile-name">
-                <strong>JUNGEUN YANG</strong>
-                <div class="section2-ico-arrow"></div>
-              </div>
-            </div>
-            <div class="profile-info">
-              <div class="section2-ico-star"></div>
-              <p>양정은 YANG JUNGEUN</p>
-              <p>1991.11.13</p>
-              <p>숙명여자대학교 미술대학 환경디자인과 졸업</p>
-              <p>010-7663-6113</p>
-              <p>yangje1113@naver.com</p>
-            </div>
-          </div>
-        </div>
-      </section>
+			<section class="section2" id="profile">
+				<div class="section2-bg"></div>
+				<div class="section2-ico-title"></div>
+				<div class="inner">
+					<div class="profile">
+						<div class="profile-con">
+							<p>UX/UI DESIGNER.</p>
+							<figure>
+								<img src="./img/profile-img.png" alt="프로필사진" />
+							</figure>
+							<div class="profile-name">
+								<strong>JUNGEUN YANG</strong>
+								<div class="section2-ico-arrow"></div>
+							</div>
+						</div>
+						<div class="profile-info">
+							<div class="section2-ico-star"></div>
+							<p>양정은 YANG JUNGEUN</p>
+							<p>1991.11.13</p>
+							<p>숙명여자대학교 미술대학 환경디자인과 졸업</p>
+							<p>010-7663-6113</p>
+							<p>yangje1113@naver.com</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <section class="section3" id="about-me">
-        <h3 class="sec-title">ABOUT ME</h3>
-        <div class="about-me">
-          <div class="sec3-1">
-            <div class="sec3-1-con">
-              <dl>
-                <dt>1-year Life</dt>
-                <dd>IN GERMANY</dd>
-              </dl>
-              <p>
-                숙명여자대학교 환경디자인과를 졸업하고 DDP 전시기획팀에서 연구원으로 일하다가 ‘내가 디자인 분야와 잘
-                맞나?’하는 진로에 대한 고민을 가지고 독일어학연수 1년을 가게 됩니다.
-              </p>
-            </div>
-            <figure><img src="./img/about-me-pic01.png" alt="어바웃미-독일사진혼자" /></figure>
-          </div>
+			<section class="section3" id="about-me">
+				<h3 class="sec-title">ABOUT ME</h3>
+				<div class="about-me">
+					<div class="sec3-1">
+						<div class="sec3-1-con">
+							<dl>
+								<dt>1-year Life</dt>
+								<dd>IN GERMANY</dd>
+							</dl>
+							<p>
+								숙명여자대학교 환경디자인과를 졸업하고 DDP 전시기획팀에서
+								연구원으로 일하다가 ‘내가 디자인 분야와 잘 맞나?’하는 진로에
+								대한 고민을 가지고 독일어학연수 1년을 가게 됩니다.
+							</p>
+						</div>
+						<figure>
+							<img src="./img/about-me-pic01.png" alt="어바웃미-독일사진혼자" />
+						</figure>
+					</div>
 
-          <div class="sec3-2">
-            <figure><img src="./img/about-me-pic02.png" alt="어바웃미-단체사진" /></figure>
-            <div class="sec3-2-con">
-              <dl>
-                <dt>Getting to know me</dt>
-                <dd>‘나’에 대해 알게 된 시기</dd>
-              </dl>
+					<div class="sec3-2">
+						<figure>
+							<img src="./img/about-me-pic02.png" alt="어바웃미-단체사진" />
+						</figure>
+						<div class="sec3-2-con">
+							<dl>
+								<dt>Getting to know me</dt>
+								<dd>‘나’에 대해 알게 된 시기</dd>
+							</dl>
 
-              <p>
-                인생 처음 가족, 친구들과 떨어져 혼자 지내게 되면서 ‘나’라는 사람에 대해 처음 들여다 본 시기로 이 시기가
-                계기가 되어 내가 진정으로 하고 싶은게 무엇인지에 대해 많이 고민해보는 계기가 되었습니다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+							<p>
+								인생 처음 가족, 친구들과 떨어져 혼자 지내게 되면서 ‘나’라는
+								사람에 대해 처음 들여다 본 시기로 이 시기가 계기가 되어 내가
+								진정으로 하고 싶은게 무엇인지에 대해 많이 고민해보는 계기가
+								되었습니다.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <section class="section4" id="work-experience">
-        <h3 class="sec-title">WORK EXPERIENCE</h3>
-        <div class="work-exp">
-          <div class="sec4-1">
-            <h4>CREATE <b>the Company</b>, STATIONARY BRAND</h4>
-            <div class="sec4-1-con">
-              <figure><img src="./img/work-experience-pic01.png" alt="꼬블린스튜디오" /></figure>
-              <div class="sec4-1-text">
-                <dl>
-                  <dt>Character Design</dt>
-                  <dd>& Goods-Item Development</dd>
-                </dl>
-                <strong>캐릭터 디자인 및 굿즈 개발 사업</strong>
-                <div class="sec4-1-smalltext">
-                  <p>-캐릭터 기획 개발 및 브랜딩</p>
-                  <p>-캐릭터를 활용한 그래픽 디자인 개발 및 상품 디자인 기획·제작 및 검수</p>
-                  <p>-2020년 지역산업 맞춤형 청년창업 SMART2030 일자리창출 지원사업 참가</p>
-                  <p>
-                    -SNS 마케팅을 통한 홍보 및 브랜드 인지도 증대를 통해 약 20개의 오프라인 매장 입점 및 중국 일본 등
-                    수출 판매
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="sec4-2">
-            <h4>WORK EXPERIENCE, <b>Seoul Design Foundation</b></h4>
-            <div class="sec4-2-con">
-              <div class="sec4-2-text">
-                <dl>
-                  <dt>Exhibition</dt>
-                  <dd>Planning & researcher</dd>
-                </dl>
-                <strong>전시기획 및 전시보조연구원</strong>
-                <div class="sec4-2-smalltext">
-                  <p>-2016 DDP 영 디자이너 챌린지 전시 기획</p>
-                  <p>
-                    :전시기획, 공간구상, 전시 설치·운영 및 홍보<br />
-                    :9일 총 관람객 6,522명(일평균 815명)
-                  </p>
-                  <p>-전시 공간 관리 및 전시 운영 관리</p>
-                  <p>-각 전시 특성에 맞는 관련 행사 프로그램 기획</p>
-                </div>
-              </div>
-              <figure><img src="./img/work-experience-pic02.png" alt="DDP영디자이너챌린지" /></figure>
-            </div>
-          </div>
-        </div>
-      </section>
+			<section class="section4" id="work-experience">
+				<h3 class="sec-title">WORK EXPERIENCE</h3>
+				<div class="work-exp">
+					<div class="sec4-1">
+						<h4>CREATE <b>the Company</b>, STATIONARY BRAND</h4>
+						<div class="sec4-1-con">
+							<figure>
+								<img
+									src="./img/work-experience-pic01.png"
+									alt="꼬블린스튜디오"
+								/>
+							</figure>
+							<div class="sec4-1-text">
+								<dl>
+									<dt>Character Design</dt>
+									<dd>& Goods-Item Development</dd>
+								</dl>
+								<strong>캐릭터 디자인 및 굿즈 개발 사업</strong>
+								<div class="sec4-1-smalltext">
+									<p>-캐릭터 기획 개발 및 브랜딩</p>
+									<p>
+										-캐릭터를 활용한 그래픽 디자인 개발 및 상품 디자인 기획·제작
+										및 검수
+									</p>
+									<p>
+										-2020년 지역산업 맞춤형 청년창업 SMART2030 일자리창출
+										지원사업 참가
+									</p>
+									<p>
+										-SNS 마케팅을 통한 홍보 및 브랜드 인지도 증대를 통해 약
+										20개의 오프라인 매장 입점 및 중국 일본 등 수출 판매
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sec4-2">
+						<h4>WORK EXPERIENCE, <b>Seoul Design Foundation</b></h4>
+						<div class="sec4-2-con">
+							<div class="sec4-2-text">
+								<dl>
+									<dt>Exhibition</dt>
+									<dd>Planning & researcher</dd>
+								</dl>
+								<strong>전시기획 및 전시보조연구원</strong>
+								<div class="sec4-2-smalltext">
+									<p>-2016 DDP 영 디자이너 챌린지 전시 기획</p>
+									<p>
+										:전시기획, 공간구상, 전시 설치·운영 및 홍보<br />
+										:9일 총 관람객 6,522명(일평균 815명)
+									</p>
+									<p>-전시 공간 관리 및 전시 운영 관리</p>
+									<p>-각 전시 특성에 맞는 관련 행사 프로그램 기획</p>
+								</div>
+							</div>
+							<figure>
+								<img
+									src="./img/work-experience-pic02.png"
+									alt="DDP영디자이너챌린지"
+								/>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <section class="section5" id="works">
-        <div class="dim"></div>
-        <h3 class="sec-title">WORKS</h3>
-        <div class="works-con">
-          <ul class="works-list">
-            <li><a href="#!">UX/UI WORKS.</a></li>
-            <li><a href="#!">ILLUSTRATION WORKS.</a></li>
-            <li><a href="#!">GRAPHIC WORKS.</a></li>
-          </ul>
+			<section class="section5" id="works">
+				<div class="dim"></div>
+				<h3 class="sec-title">WORKS</h3>
+				<div class="works-con">
+					<ul class="works-list">
+						<li><a href="#!">UX/UI WORKS.</a></li>
+						<li><a href="#!">ILLUSTRATION WORKS.</a></li>
+						<li><a href="#!">GRAPHIC WORKS.</a></li>
+					</ul>
 
-          <div class="works-list-infos">
-            <div class="works-list-info">
-              <dl>
-                <dt>
-                  2022. 08. ~ 2023. 01.<br />
-                  UI/UX 5개월 과정 동안 진행한 작업
-                </dt>
-                <dd>UX/UI WORKS.</dd>
-              </dl>
-              <ul class="works-list-item">
-                <li>
-                  <a href="#!" class="aladin">ALADIN</a>
+					<div class="works-list-infos">
+						<div class="works-list-info">
+							<dl>
+								<dt>
+									2022. 08. ~ 2023. 01.<br />
+									UI/UX 5개월 과정 동안 진행한 작업
+								</dt>
+								<dd>UX/UI WORKS.</dd>
+							</dl>
+							<ul class="works-list-item">
+								<li>
+									<a href="#!" class="aladin">ALADIN</a>
 
-                  <div class="works-list-item-detail">
-                    <div class="box-con">
-                      <div class="box-title">
-                        <div>
-                          <span>Movie 'Aladin'</span>
-                          <span>Movie 'Aladin'</span>
-                        </div>
-                      </div>
-                      <figure><img src="./img/works-aladin.png" alt="알라딘 마이크로사이트 미리보기" /></figure>
-                      <div class="box-bottom">
-                        <div class="box-text">
-                          <dl>
-                            <dt>Microsite Design</dt>
-                            <dd>Movie 'Aladin'</dd>
-                          </dl>
-                          <p>영화 '알라딘' 마이크로사이트 디자인</p>
-                        </div>
-                        <a href="aladin.html" target="_blank" class="box-link"></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+									<div class="works-list-item-detail">
+										<div class="box-con">
+											<div class="box-title">
+												<div>
+													<span>Movie 'Aladin'</span>
+													<span>Movie 'Aladin'</span>
+												</div>
+											</div>
+											<figure>
+												<img
+													src="./img/works-aladin.png"
+													alt="알라딘 마이크로사이트 미리보기"
+												/>
+											</figure>
+											<div class="box-bottom">
+												<div class="box-text">
+													<dl>
+														<dt>Microsite Design</dt>
+														<dd>Movie 'Aladin'</dd>
+													</dl>
+													<p>영화 '알라딘' 마이크로사이트 디자인</p>
+												</div>
+												<a
+													href="aladin.html"
+													target="_blank"
+													class="box-link"
+												></a>
+											</div>
+										</div>
+									</div>
+								</li>
 
-                <li>
-                  <a href="#!" class="rimowa">RIMOWA</a>
-                  <div class="works-list-item-detail">
-                    <div class="box-con">
-                      <div class="box-title">
-                        <div>
-                          <span>RIMOWA</span>
-                          <span>RIMOWA</span>
-                        </div>
-                      </div>
-                      <figure><img src="./img/works-rimowa.png" alt="리모와 반응형 웹사이트 디자인" /></figure>
-                      <div class="box-bottom">
-                        <div class="box-text">
-                          <dl>
-                            <dt>UI/UX responsive website renewal</dt>
-                            <dd>RIMOWA</dd>
-                          </dl>
-                          <p>캐리어 브랜드 'RIMOWA'의 반응형 웹사이트 리뉴얼</p>
-                        </div>
-                        <a href="rimowa.html" target="_blank" class="box-link"></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <a href="./ssolvey.html" class="ssolvey">SSOLVEY</a>
-                  <div class="works-list-item-detail">
-                    <div class="box-con">
-                      <div class="box-title">
-                        <div>
-                          <span>SSOLVEY</span>
-                          <span>SSOLVEY</span>
-                        </div>
-                      </div>
-                      <figure><img src="./img/works-ssolvey.png" alt="쏠베이 앱디자인" /></figure>
-                      <div class="box-bottom">
-                        <div class="box-text">
-                          <dl>
-                            <dt>Application design</dt>
-                            <dd>SSOLVEY</dd>
-                          </dl>
-                          <p>'쏠베이' 앱 디자인</p>
-                        </div>
-                        <a href="ssolvey.html" target="_blank" class="box-link"></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="works-list-info">
-              <dl>
-                <dt>캐릭터 사업 및 일러스트 외주 작업</dt>
-                <dd>ILLUSTRATION WORKS.</dd>
-              </dl>
-              <ul class="works-list-item">
-                <li><a href="#!" class="ggoblin_studio">GGOBLIN_STUDIO</a></li>
-                <li><a href="#!" class="adsologist">ADSOLOGIST</a></li>
-              </ul>
-            </div>
-            <div class="works-list-info">
-              <dl>
-                <dt>그래픽 작업</dt>
-                <dd>GRAPHIC WORKS.</dd>
-              </dl>
-              <ul class="works-list-item">
-                <li><a href="#" class="graphic1">GRAPHIC1</a></li>
-                <li><a href="#" class="graphic2">GRAPHIC2</a></li>
-                <li><a href="#" class="graphic3">GRAPHIC3</a></li>
-                <li><a href="#" class="graphic4">GRAPHIC4</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <hr />
-    <footer id="footer"></footer>
-    <script></script>
-  </body>
+								<li>
+									<a href="#!" class="rimowa">RIMOWA</a>
+									<div class="works-list-item-detail">
+										<div class="box-con">
+											<div class="box-title">
+												<div>
+													<span>RIMOWA</span>
+													<span>RIMOWA</span>
+												</div>
+											</div>
+											<figure>
+												<img
+													src="./img/works-rimowa.png"
+													alt="리모와 반응형 웹사이트 디자인"
+												/>
+											</figure>
+											<div class="box-bottom">
+												<div class="box-text">
+													<dl>
+														<dt>UI/UX responsive website renewal</dt>
+														<dd>RIMOWA</dd>
+													</dl>
+													<p>캐리어 브랜드 'RIMOWA'의 반응형 웹사이트 리뉴얼</p>
+												</div>
+												<a
+													href="rimowa.html"
+													target="_blank"
+													class="box-link"
+												></a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="./ssolvey.html" class="ssolvey">SSOLVEY</a>
+									<div class="works-list-item-detail">
+										<div class="box-con">
+											<div class="box-title">
+												<div>
+													<span>SSOLVEY</span>
+													<span>SSOLVEY</span>
+												</div>
+											</div>
+											<figure>
+												<img
+													src="./img/works-ssolvey.png"
+													alt="쏠베이 앱디자인"
+												/>
+											</figure>
+											<div class="box-bottom">
+												<div class="box-text">
+													<dl>
+														<dt>Application design</dt>
+														<dd>SSOLVEY</dd>
+													</dl>
+													<p>'쏠베이' 앱 디자인</p>
+												</div>
+												<a
+													href="ssolvey.html"
+													target="_blank"
+													class="box-link"
+												></a>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="works-list-info">
+							<dl>
+								<dt>캐릭터 사업 및 일러스트 외주 작업</dt>
+								<dd>ILLUSTRATION WORKS.</dd>
+							</dl>
+							<ul class="works-list-item">
+								<li><a href="#!" class="ggoblin_studio">GGOBLIN_STUDIO</a></li>
+								<li><a href="#!" class="adsologist">ADSOLOGIST</a></li>
+							</ul>
+						</div>
+						<div class="works-list-info">
+							<dl>
+								<dt>그래픽 작업</dt>
+								<dd>GRAPHIC WORKS.</dd>
+							</dl>
+							<ul class="works-list-item">
+								<li><a href="#" class="graphic1">GRAPHIC1</a></li>
+								<li><a href="#" class="graphic2">GRAPHIC2</a></li>
+								<li><a href="#" class="graphic3">GRAPHIC3</a></li>
+								<li><a href="#" class="graphic4">GRAPHIC4</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<hr />
+		<footer id="footer"></footer>
+		<script></script>
+	</body>
 </html>
