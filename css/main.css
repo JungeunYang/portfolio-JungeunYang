@@ -689,12 +689,12 @@ h2 {
 }
 
 .section3 p {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   line-height: 1.6;
-  margin-top: 3.2rem;
+  margin-top: 4rem;
   border-top: 1px solid var(--main-color);
   border-bottom: 1px solid var(--main-color);
-  padding: 5rem 0 5rem 0;
+  padding: 3rem 1rem;
 }
 .sec3-1 figure {
   bottom: 0;
@@ -773,22 +773,22 @@ h2 {
 .section3 dl dt,
 .section4 dl dt {
   font-family: 'ITC New Baskerville Std SmBdIt';
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: 1.2;
 }
 .section3 dl dd,
 .section4 dl dd {
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin-top: -0.5rem;
+  font-size: 3rem;
+  /* margin-top: -0.5rem; */
 }
 .section4 strong {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   display: block;
   margin-top: 2rem;
 }
-.sec4-1 h4 {
-  font-size: 4rem;
+.sec4-1 h4,
+.sec4-2 h4 {
+  font-size: 4.2rem;
   text-align: center;
 }
 .sec4-1 h4 b {
@@ -812,14 +812,15 @@ h2 {
   padding: 0 0 0 10rem;
   /* background: green; */
 }
-.sec4-1-smalltext {
+.sec4-1-smalltext,
+.sec4-2-smalltext {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.5;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   margin-top: 3.2rem;
-  padding: 2rem 0 2rem 0;
+  padding: 3rem 1rem;
 }
 
 .sec4-1-text p + p {
@@ -830,10 +831,6 @@ h2 {
   margin-top: 15rem;
 }
 
-.sec4-2 h4 {
-  font-size: 3.8rem;
-  text-align: center;
-}
 .sec4-2 h4 b {
   font-family: 'ITC New Baskerville Std SmBdIt';
 }
@@ -851,15 +848,6 @@ h2 {
   /* background: green; */
 }
 
-.sec4-2-smalltext {
-  display: block;
-  font-size: 1.8rem;
-  line-height: 1.5;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  margin-top: 3.2rem;
-  padding: 2rem 0 2rem 0;
-}
 .sec4-2-text p + p {
   margin-top: 1rem;
 }
@@ -1083,7 +1071,7 @@ h2 {
 }
 .box-bottom dl {
   text-align: left;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .box-bottom dl dt {
   font-size: 2.3rem;
@@ -1099,10 +1087,27 @@ h2 {
   font-weight: 400;
   margin-top: -2rem;
 }
-.box-bottom a {
+.box-btn {
+  display: flex;
+  font-size: 2rem;
+  gap: 1.5rem;
+}
+.box-link {
   background: url(../img/works-link-arrow.svg) no-repeat 50% / contain;
   width: 5rem;
   height: 5rem;
+}
+.box-bottom .box-btn a {
+  background: none;
+  width: auto;
+  height: auto;
+  border: 1px solid var(--main-color);
+  border-radius: 2.5rem;
+  padding: 1rem 3rem;
+}
+.box-btn a:hover {
+  background: var(--main-color);
+  color: #fff;
 }
 
 /* section5: work-box */
