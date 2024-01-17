@@ -207,21 +207,21 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  border: 2px solid red;
+  background: var(--main-color); /* border: 2px solid red; */
 }
 #header .popup-menu .top-menu .popup-main-menu li {
   /* padding: 8px 12px; */
   font-size: 5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   height: 25%;
-  border: 1px solid green;
+  border: 2px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #header .popup-menu .top-menu .popup-main-menu li a {
-  color: var(--main-color);
+  color: #000;
   text-transform: uppercase;
 }
 #header .navbar-button {
